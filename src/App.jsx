@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
 import { LoginPage } from './pages/LoginPage/LoginPage';
+import { LandingPage } from './pages/LandingPage/LandingPage';
 
 export function App() {
   return (
@@ -12,7 +13,8 @@ export function App() {
       
       <Router>
         <Routes > 
-          <Route path="/" element={<LoginPage />} />
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/login" element={<LoginPage />} />
         </Routes>
       </Router>
     </div>
