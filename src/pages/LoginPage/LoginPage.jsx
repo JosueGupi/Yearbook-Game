@@ -1,15 +1,9 @@
 import React, { Fragment, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { Typography, Button } from '@mui/material';
-
-
 import Box from '@mui/material/Box';
-
-
 import FormControl from '@mui/material/FormControl';
-
 import TextField from '@mui/material/TextField';
-
 import axios from 'axios'
 import {useForm} from 'react-hook-form';
 
@@ -45,15 +39,15 @@ export function LoginPage() {
     }
 
     return isValid;
-  };
+  }
   const onSubmit = async(data) => {
 
     try {
       if(validateInputs(data)){
         const response = await axios.post('http://localhost:3001/users/login', data);
-        navigate('/menu');
+        navigate('/menu', {state: response.data[0]});
       }else{
-        console.log('La información propocionada no es valida');
+        console.log('La información proporcionada no es valida');
       }
     }
     catch{
