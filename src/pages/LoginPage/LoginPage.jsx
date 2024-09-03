@@ -51,7 +51,7 @@ export function LoginPage() {
     try {
       if(validateInputs(data)){
         const response = await axios.post('http://localhost:3001/users/login', data);
-        navigate('/');
+        navigate('/menu');
       }else{
         console.log('La información propocionada no es valida');
       }
