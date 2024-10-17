@@ -3,23 +3,14 @@ import {useNavigate, useLocation} from 'react-router-dom';
 import {Typography, Button, Grid} from '@mui/material';
 import Box from '@mui/material/Box';
 
-
-export function MenuPage() {
-
+export function AdminPage() {
     const navigate = useNavigate();
-    const {state} = useLocation();
-    const [adminConfirmation, setAdminConfirmation] = useState(false);
-    useEffect(() => {
-        setAdminConfirmation(state.admin)
-    }, []);
-
-    const goToAdminPage = () => {
-      navigate('/admin');
+    const goToCreateUserPage = () => {
+      navigate('/createUserPage');
     }
 
     return (
         <Fragment>
-
             <div style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -37,7 +28,7 @@ export function MenuPage() {
                         component="h4"
                         sx={{color: "#e17624"}}
                     >
-                        MENU
+                        ADMIN MENU
                     </Typography>
                     <Box
                         sx={{
@@ -62,7 +53,22 @@ export function MenuPage() {
                                 margin: '8px',
                             }}
                         >
-                            Iniciar Partida
+                            Modificar Listas de Nombres
+                        </Button>
+                        <Button
+                            variant="contained"
+                            sx={{
+                                width: {
+                                    xs: '80%',    // 80% del contenedor en pantallas pequeñas
+                                    sm: '60%',    // 60% del contenedor en pantallas medianas
+                                    md: '50%',    // 50% en pantallas grandes
+                                },
+                                backgroundColor: '#e17624',
+                                margin: '8px',
+                            }}
+                            onClick={goToCreateUserPage}
+                        >
+                            Crear Usuario
                         </Button>
                         <Button
                             variant="contained"
@@ -76,7 +82,7 @@ export function MenuPage() {
                                 margin: '8px',
                             }}
                         >
-                            Unirse a partida
+                            Actualizar Usuario
                         </Button>
                         <Button
                             variant="contained"
@@ -90,25 +96,8 @@ export function MenuPage() {
                                 margin: '8px',
                             }}
                         >
-                            Estadísticas
+                            Eliminar Usuario
                         </Button>
-                        {adminConfirmation &&
-                            <Button
-                                variant="contained"
-                                sx={{
-                                    width: {
-                                        xs: '80%',    // 80% del contenedor en pantallas pequeñas
-                                        sm: '60%',    // 60% del contenedor en pantallas medianas
-                                        md: '50%',   // 45vh en pantallas grandes
-                                    },
-                                    backgroundColor: '#e17624',
-                                    margin: '8px',
-                                }}
-                                onClick={goToAdminPage}
-                            >
-                                Admin
-                            </Button>
-                        }
                     </Box>
                 </Box>
             </div>

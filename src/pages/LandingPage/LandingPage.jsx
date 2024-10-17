@@ -6,12 +6,11 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 
 export function LandingPage () {
-  
     const navigate = useNavigate();
-
     const goToLogin = () => {
         navigate('/login');
     }
+
     return (
         <Fragment>
         <div style={{display: 'flex',

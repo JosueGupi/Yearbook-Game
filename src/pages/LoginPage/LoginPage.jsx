@@ -37,7 +37,6 @@ export function LoginPage() {
       setPasswordError(false);
       setPasswordErrorMessage('');
     }
-
     return isValid;
   }
   const onSubmit = async(data) => {
@@ -71,7 +70,7 @@ export function LoginPage() {
           sx={{
             display: 'flex',
             flexDirection: 'column',
-            width: '50vh',
+            width: '60vh',
             gap: 2,
             backgroundColor: 'Silver',
             borderRadius: '1vh',
@@ -119,14 +118,11 @@ export function LoginPage() {
 
           <Button
             type="submit"
-
             variant="contained"
-            
             sx={{ width: '45vh', backgroundColor: '#e17624' }}
           >
             ingresar
           </Button>
-
         </Box>
       </div>
 
