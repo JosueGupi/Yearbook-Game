@@ -6,7 +6,10 @@ import Box from '@mui/material/Box';
 export function AdminPage() {
     const navigate = useNavigate();
     const goToCreateUserPage = () => {
-      navigate('/createUserPage');
+      navigate('/createUser');
+    }
+    const goToUpdateUserPage = () => {
+      navigate('/updateUser');
     }
 
     return (
@@ -81,6 +84,7 @@ export function AdminPage() {
                                 backgroundColor: '#e17624',
                                 margin: '8px',
                             }}
+                            onClick={goToUpdateUserPage}
                         >
                             Actualizar Usuario
                         </Button>

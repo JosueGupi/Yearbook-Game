@@ -1,6 +1,6 @@
 import React, {Fragment, useEffect, useState} from 'react'
 import {useNavigate, useLocation} from 'react-router-dom';
-import {Typography, Button, Grid, InputLabel, Select, MenuItem} from '@mui/material';
+import {Typography, Button, InputLabel, Select, MenuItem} from '@mui/material';
 import Box from '@mui/material/Box';
 import TextField from "@mui/material/TextField";
 import {useForm} from "react-hook-form";
@@ -80,13 +80,14 @@ export default function CreateUserPage() {
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'center',
-                    width: '50vh',
+                    width: '40%',
+                    maxWidth: '500px',
+                    height: 'auto',
                     gap: '16px',
                     backgroundColor: 'Silver',
                     borderRadius: '1vh',
-                    height: '31vh',
                     alignItems: 'center',
-                    padding: '5%',
+                    padding: '20px',
                 }}
             >
                 <Typography
